@@ -56,7 +56,7 @@ sockaddr_in get_server_struct(int port)
 int open_listenfd(int port)
 {
     int err, listenfd;
-    sockaddr_in servaddr = get_server_struct(SERV_PORT);
+    sockaddr_in servaddr = get_server_struct(port);
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     check_exit(listenfd != -1, "create listenfd error");
